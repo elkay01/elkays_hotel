@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Rooms
+{% endblock title %}
+
+
+
+{% block content %}
+<!-- content section -->
+<div class="pbanner"></div>
+
+  <div class="container-fluid my-3 prod">
+    <h1 class="">Available Rooms</h1>
+      <div class="row">
+        {% if room %}
+          {% for item in room %}
+            <div class="col-md-3">
+              <a href="{% url 'details' item.id %" class="card-link">
+                  <div class="card my-3">
+                    <a href="{% url 'details' item.id %}">
+                      <img height="200" src="{{item.image.url}}" alt="image-fluid" class="card-img" >
+                    </a>
+                      
+                      <div class="card-body">
+                          <a href="{% url 'details' item.id %}"><h5 class="card-title">{{item.number}}</h5>
+                              <h5 class="card-title">Category:{{item.category}} </h5>
+                              <p class="card-text">$ {{item.price}}</p>
+                          </a>
+                      </div>
+                  </div>
+              </a>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+  </div>
+{% endblock content %}
+
+
+{% block footer %}{% include "footer.html" %}{% endblock footer %}

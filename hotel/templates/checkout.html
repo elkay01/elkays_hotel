@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% load mathfilters %}
+
+{% load humanize %}
+
+
+{% block title %}
+  Checkout
+{% endblock title %}
+
+
+{% block content %}
+<div class="container-fluid mt-5 mb-5">
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+            <table class="table sctable">
+                <thead>
+                  <tr>
+                    <th scope="col">Room</th>
+                    <!-- <th scope="col">Image</th> -->
+                    <th scope="col">Price</th>
+                    <th scope="col">Checkin date</th>
+                    <th scope="col">Checkout date</th>
+                    <th scope="col">Days Booked</th>
+                    <th scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>  
+                      {% if booking_view %}
+                        {% for item in booking_view  %}
+                         <tr>
+                          <td>{{item.rooms.name}}</td>
+                             <!-- <td><img src="{{item.rooms.image.url}}" width="70px"></td> -->
+                             <td>{{item.rooms.price}}</td>
+                             <td>{{item.check_in}}</td>
+                             <td>{{item.check_out}}</td>
+                             <td>{{item.days}}</td>
+                             <td>{{item.price|mul:item.days|floatformat:2|intcomma}}</td>
+                         </tr>
+                        {% endfor %}  
+                      {% endif %}
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Total:{{total|floatformat:2|intcomma}}</td>
+                    </tr>
+                </tbody>
+              </table>
+                
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-3 sctable sctabl">
+                <form style="width: 400px;" method="POST" action="{% url 'placeorder' %}">
+                {% csrf_token %}
+                    <div class="form-group">
+                      <input type="text" name="first_name" value="{{done.first_name}}" placeholder="First Name" class="form-control" id="exampleInputText1" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="last_name" value="{{done.last_name}}" placeholder="Last Name" class="form-control" id="exampleInputText1" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="phone" value="{{done.phone}}" placeholder="Phone Number" class="form-control" id="exampleInputText1" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="address" value="{{done.address}}" placeholder="Address" class="form-control" id="exampleInputText1" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="city" value="{{done.city}}" placeholder="City" class="form-control" id="exampleInputText1" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="state" value="{{done.state}}" placeholder="State" class="form-control" id="exampleInputText1" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="hidden" name="total" value="{{total}}" class="form-control" id="exampleInputText1">
+                      <input type="hidden" name="booking_view_code" value="{{booking_view_code}}" class="form-control" id="exampleInputText1">
+                    </div>
+                    <button type="submit" class="btn pay">Checkout</button> 
+                  </form>
+            </div>
+        </div>
+
+    </div>
+{% endblock content %}
+
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock footer %}

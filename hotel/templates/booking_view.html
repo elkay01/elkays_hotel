@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% load mathfilters %}
+
+{% load humanize %}
+
+
+{% block title %}
+  Booking
+{% endblock title %}
+
+
+{% block content %}
+<div class="container-fluid mt-5 mb-5" >
+    <div class="row">
+        <div class="col-12 col-sm-2"></div>
+        <div class="col-12 col-sm-8">
+            <table class="table sctable">
+                <thead>
+                  <tr>
+                    <th scope="col">Delete</th>
+                    <!-- <th scope="col">Image</th> -->
+                    <th scope="col">Room</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Check-in Date</th>
+                    <th scope="col">Check-out Date</th>
+                    <th scope="col">Days Booked</th>
+                    <th scope="col">Amount</th>
+                    <!-- <th scope="col">Room Update</th> -->
+                  </tr>
+                </thead>
+                <tbody>  
+                    {% if booking_view %}
+                         {% for item in booking_view  %}         
+                         <tr>
+                             <td>
+                                <form method="POST" action="{% url 'deleteitem' %}">
+                                {% csrf_token %}
+                                    <input type="hidden" name="itemid" value="{{item.id}}">
+                                    <button type="submit" class="btn btn-danger">&times;</button>
+                                </form>
+                             </td>
+                             <!-- <td><img src="{{item.rooms.image.url}}" width="70px"></td> -->
+                             <td>{{item.rooms.name}}</td>
+                             <td>{{item.rooms.price}}</td>
+                             <td>{{item.check_in}}</td>
+                             <td>{{item.check_out}}</td>
+                             <td>{{item.days}}</td>
+                             <td>{{item.price|mul:item.days|floatformat:2|intcomma}}</td>
+                             <!-- <td>
+                                 <form style="width: 400px;" method="POST" action="{% url 'increase' %}">
+                                    {% csrf_token %}
+                                    <input style="width: 40px;" type="number" name="itemval" value="{{item.quantity}}" max="{{item.max}}" min="{{item.min}}">
+                                    <input type="hidden" name="valid" value="{{item.id}}">
+                                    <button type="submit" class="btn btn-success">&checkmark;</button>
+                                </form>
+                            </td> -->
+                        </tr>
+                            {% endfor %}  
+                       {% endif %}
+                </tbody>
+                <tbody>
+                    <tr>
+                        <!-- <td></td> -->
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Subtotal:{{subtotal|floatformat:2|intcomma}}</td>
+                    </tr>
+                    <tr>
+                        <!-- <td></td> -->
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Vat:{{vat|floatformat:2|intcomma}}</td>
+                    </tr>
+                    <tr>
+                        <!-- <td></td> -->
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Total:{{total|floatformat:2|intcomma}}</td>
+                    </tr>
+                    <tr>
+                        <!-- <td></td> -->
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="{% url 'checkout' %}" class="pay pt-2 pb-2 pl-2 pr-2">Checkout</a></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- <div class="col-12 col-sm-2"></div> -->
+        </div>
+    </div>
+
+{% endblock content %}
+
+
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock footer %}

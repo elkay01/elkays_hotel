@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Room details {% endblock title %}
+
+
+
+{% block content %}
+<!-- content section -->
+<!-- {% for message in messages %}
+  {{message}}
+{% endfor %} -->
+<div class="pbanner"></div>
+<div class="container-fluid prod">
+    <h1 class="">{{details.name|title}} Details</h1>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb-3 mt-3 w-25"></div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-3 mt-3 w-50">
+            <div class="card w-100 text-center pt-3">
+                <img src="{{details.image.url}}" alt="image-fluid" class="card-img-top w-100">
+                <div class="card-body mt-3">
+                <h5 class="card-title">Room: {{details.name}}</h5>
+                <h5 class="card-title">Category: {{details.category.title}}</h5>
+                <p>$ {{details.price}}</p>
+                <p>{{details.description}}</p>
+                </div>
+                <div class="deform">
+                    <form  method="POST" action="{% url 'booking' %}">
+                    {% csrf_token %}
+                        <div class="input">   
+                            <label for="check_in">Check In</label>
+                            <input type="date"  id="check_in" name="checkin" required>
+                            <label for="check_out">Check Out</label>
+                            <input type="date"  id="check_out" name="checkout" required>
+                        </div>
+                        <!-- <label for="">Room</label> <input type="number" name="quantity" value="1" min="{{details.min}}" max="{{details.max}}"> -->
+                        <input type="hidden" name="itemid" value="{{details.id}}">
+                        <button type="submit" class="btn">Book Room</button>
+                </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb-3 mt-3 w-25"></div>
+    </div>
+</div>
+<!-- content section done -->
+
+  
+{% endblock content %}
+
+{% block footer %}{% include "footer.html" %}{% endblock footer %}

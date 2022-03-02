@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load mathfilters %}
+
+{% load humanize %}
+
+{% block title %}
+   Transaction Completed  
+{% endblock title %}
+
+
+{% block content %}
+  <div class="container-fluid">
+      <div class="row mt-5 mb-5">
+        <div class="col-12 col-sm-2"> </div>
+          <div class="col-12 col-sm-8 mt-5 mb-5 text-center comp">
+              <h2 style="color: brown;font-weight:600"> Dear <span style="color: black;">{{don.first_name}}</span> Your Transaction is completed!</h2>
+              <h3 style="color: brown;font-weight:500">Thank you for your patronage.</h3>
+              <h4 style="color: brown;font-weight:400">We look forward to your arrival!</h4>
+          </div>
+          <div class="col-12 col-sm-2">
+            
+          </div>
+      </div>
+  </div>
+{% endblock content %}
+
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock footer %}

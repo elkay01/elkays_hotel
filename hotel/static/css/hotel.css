@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar{
+    background: brown;
+}
+.navbar .navbar-brand{
+    color: white;
+    font-size: 2em;
+}
+#navbarSupportedContent a{
+    color: white;
+    font-size: 1em;
+}
+.dropdown-menu{
+    background: brown;
+}
+.dropdown-menu .dropdown-item{
+   color: white;
+}
+.dropdown-menu .dropdown-item:hover{
+   color: brown !important;
+   font-weight: 700;
+}
+
+/* header done  */
+/* banner  */
+.back{
+    background: brown;
+}
+.carousel-caption{
+    color: white;
+    font-weight: 800;
+}
+.carousel-caption h5{
+    font-size: 3em;
+    font-weight: 900;
+    margin-bottom: 2%;
+}
+.carousel-caption p{
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 10%;
+}
+/* banner done */
+
+/* product banner  */
+.pbanner{
+    background: url(../imgg/lobby2.jpeg);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    color: white;
+}
+/* product banner done */
+.prod .row{
+    margin-bottom: 10% !important;
+}
+.prod h1{
+    margin-top: 7%;
+    margin-bottom: 3%;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: brown;
+    text-transform: capitalize;
+    text-align: center;
+}
+.prod a,
+.prod h5,
+.prod p{
+    color: brown;
+    font-size: 1em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: capitalize;
+}
+.prod img{
+    height: 35vh;
+}
+.prodb img{
+    height: 50vh;
+}
+.deform input{
+    color: brown;
+    text-align: center;
+    width: 80px;
+    height: 40px;
+    margin-bottom: 3%;
+    border: 1px solid brown;
+    outline: none;
+    font-size: 1em;
+    font-weight: 400;
+}
+.deform .input input{
+    color: brown;
+    text-align: center;
+    width: 170px;
+    height: 40px;
+    margin-bottom: 3%;
+    font-size: 1em;
+    font-weight: 400;
+}
+.deform .input label{
+    color: brown;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 1%;
+    font-size: 1em;
+    font-weight: 400;
+}
+.deform button{
+    color: white;
+    background: brown;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 1%;
+    font-size: 1em;
+    font-weight: 400;
+}
+.deform button:hover{
+    color: white;
+    background: brown;
+}
+.deform label{
+    color: brown;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 1%;
+    font-size: 1em;
+    font-weight: 400;
+}
+/* content done */
+/* locate  */
+.map{
+    height: 50vh;
+    border: none;
+}
+/* locate done */
+
+
+/* content  */
+.content{
+    height: 40vh;
+    align-items: center;
+    text-transform: capitalize;
+    background: brown;
+    color: white;
+}
+.content2{
+    background: url(../imgg/lobby.jpeg);
+    height: 62vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    color: white;
+}
+.conta,
+.contb,
+.contc,
+.content,
+.content1,
+.content2{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-transform: capitalize;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.content h1{
+    font-size: 2.5em;
+    font-weight: 900;
+    margin-bottom: 2%;
+}
+.content1 h4{
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-top: 8%;
+    margin-bottom: 2%;
+    color: brown;
+}
+.content1 p{
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 8%;
+    max-width: 700px;
+    color: brown;
+}
+.content2 h4{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    color: white;
+}
+.content2 p{
+    font-size: 1.1em;
+    font-weight: 500;
+    max-width: 700px;
+    color: white;
+}
+.content2 h6{
+    font-size: 1.1em;
+    font-weight: 500;
+    max-width: 700px;
+    color: white;
+    margin-bottom: 8%;
+}
+
+.conta{
+    background: url(../imgg/pool3.jpeg);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    color: white;
+}
+.contc h4,
+.conta h4,
+.contb h4{
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-top: 6%;
+    margin-bottom: 3%;
+}
+.contc p,
+.conta p,
+.contb p{
+    font-size: 1.3em;
+    font-weight: 600;
+    max-width: 700px;
+    z-index: 10;
+    margin-bottom: 10%;
+}
+.contb{
+    background: url(../imgg/restuarant.jpeg);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    color: white;
+}
+.contc{
+    background: url(../imgg/bar.jpeg);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    color: white;
+}
+.top{
+    padding: 4% 2% 5% 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+.top2{
+    padding: 4% 2% 5% 8%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    text-align: center;
+}
+.top2 h3,
+.top h3{
+    font-size: 1.7em;
+    font-weight: 600;
+    color: brown;
+    margin-bottom: 5%;
+    text-align: center;
+}
+.top2 p,
+.top p{
+    font-size: 1.3em;
+    font-weight: 400;
+    color: brown;
+    text-align: center;
+}
+.top2 a,
+.top a{
+    font-size: 1.5em;
+    font-weight: 400;
+    color: brown;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+.img{
+    width: 100%;
+    /* height: 40vh; */
+    background: brown;
+}
+.img img{
+    width: 100%;
+}
+/* content done */
+
+
+/* footer  */
+.footer .list-inline li a{
+    color: white;
+    transition: transform .5s;
+}
+.footer .list-inline li a i:hover{
+    transform: translateY(-60%) !important;
+}
+.footer{
+    text-align: center;
+    font-weight: bold;
+    background: brown;
+}
+.footer h1{
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+.footer h5{
+    color: white;
+    font-size: 1.2em;
+}
+.footer h6{
+    color: white;
+    font-size: 1.2em;
+    text-align: left;
+    margin-left: 10%;
+}
+.footer h6 a{
+    color: white;
+    transition: 2s;
+}
+.footer h6 a:hover i{
+    margin-right: 10% !important;
+}
+.footer h6 i{
+    font-size: 1em;
+    margin-top: 2%;
+}
+.footer .side{
+    margin: 5% 0 1%;
+}
+.footer .sides{
+    border-left: 1px solid grey;
+}
+.footer img{
+    width: 100px;
+}
+.footer .anchor li a{
+    color: white;
+    font-size: 1.2em;
+}
+.footer .anchor li a:hover{
+    text-decoration: none !important;
+}
+.footer .fab{
+    font-size: 20px;
+}
+.footer .copyright{
+    border-top: .5px solid white;
+    color: white;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.footer .copyright p a{
+    color: white;
+    text-align: center;
+}
+.footer .copyright p a:hover{
+   text-decoration: none !important;
+}
+/* footer done */
+/* complete   */
+.sctable thead {
+    background: brown;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+.sctable tbody tr{
+    color: brown;
+    font-weight: 600;
+    text-align: center;
+}
+.sctable .pay{
+    background: brown;
+    color: white;
+    font-weight: 500;
+    outline: none;
+    border: none;
+}
+.sctable .pay:hover{
+    box-shadow: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+.sctabl input{
+    border: 1px solid brown;
+    outline: none;
+    color: brown;
+}
+.sctabl input:hover{
+    box-shadow: 1px 1px 2px 2px brown;
+    border: none;
+    outline: none;
+    color: brown;
+}
+.sctabl input:focus{
+    box-shadow: 1px 1px 2px 2px brown;
+    border: none;
+    outline: none;
+}
+/* complete  done */
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+    .content1{
+        margin-top: 1%;
+        margin-bottom: 6%;
+    }
+    .content h1{
+        font-size: 1.5em;
+    }
+    .content1 h4{
+        font-size: 1.2em;
+        margin-bottom: 3%;
+    }
+    .content1 p{
+        font-size: 1em;
+        margin-bottom: 3%;
+    }
+    .content2 h4{
+        font-size: 1.2em;
+        margin-bottom: 3%;
+    }
+    .content2 p{
+        font-size: 1em;
+        margin-bottom: 3%;
+    }
+    .content2 h6{
+        font-size: .9em;
+        margin-bottom: 3%;
+    }
+    .contc h4,
+    .conta h4,
+    .contb h4{
+        font-size: 1.2em;
+        margin-bottom: 3%;
+    }
+    .contc p,
+    .conta p,
+    .contb p{
+        font-size: 1em;
+        margin-bottom: 6%;
+    }
+    .top2 h3{
+        font-size: 1.1em;
+        font-weight: 600;
+        color: brown;
+        margin-bottom: 5%;
+    }
+    .top2 p{
+        font-size: 1em;
+        font-weight: 400;
+        color: brown;
+        margin-top: 2%;
+    }
+    .top2 a{
+        font-size: 1em;
+        font-weight: 400;
+        color: brown;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+}

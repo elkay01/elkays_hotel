@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Home {% endblock title %}
+
+ <!-- banner  -->
+ {% block banner %} {% include "banner.html" %} {% endblock banner %}
+ <!-- banner done -->
+
+
+
+{% block content %}
+     
+
+<!-- content  -->
+<div class="content">
+       <h1 class="title">Welcome to Elkays Hotel Lagos</h1>
+     </div>
+     <div class="content1">
+       <h4>Stay at our hotel accommodation</h4>
+       <p>An amazing experience located on the Lekki Peninsula, Victoria Island in Lagos state, south-west Nigeria.
+         With easy access to Victoria Island and Ikoyi over the newly opened bridge, our hotel allows both business and leisure travellers to enjoy modern and luxurious facilities in a unique boutique ambiance
+         </p>
+     </div>
+   
+     <div class="content2" style="height: 70vh;">
+       <h4>Accommodations</h4>
+       <p>The Elkays Hotel offers a new vision on luxury with 74 rooms including 6 suites and a full range of facilities and provides redefined service to its guests in Lagos, Nigeria. With conference facilities, 
+         restaurant, bar, swimming-pool, gym and free Wi-Fi it is the ideal location for work and relaxation.</p>
+         <p>Our rooms are decorated in an urban chic style. Catch up on work at the desk, stay connected with complimentary Wi-Fi, Smart TV and 24hrs electricity.</p>
+       <h6>Top Exercise Room Facilities in Lagos, Nigeria. The Elkay's in Lagos is the ideal choice for health and relaxation</h6>
+     </div>
+   
+   
+     <div class="container">
+       <div class="row top">
+         <div class="col-12 col-lg-6">
+           <div class="img">
+                 <img src="{{eco.image.url}}">
+           </div>
+         </div>
+         <div class="col-12 col-lg-6 mt-5 text-center">
+           <h3>Economy class</h3>
+           <p>{{eco.description|slice:150}}...</p>  
+           <a href="{% url 'rooms' %}">Book a Room</a>
+         </div>
+       </div>
+     </div>
+   
+     <div class="conta">
+       <h4>cool pool side</h4>
+       <p>The Elkays Hotel pool is so cool Whether for a relaxing swim or water workout, refresh and rejuvenate yourself in our chilled pool.
+         The poolside is a great place to enjoy a drink and snack after your exercise.
+     </div>
+   
+     <div class="container topb">
+       <div class="row top2">
+         <div class="col-12 col-lg-6">
+           <div class="img">
+               <img src="{{fam.image.url}}">
+           </div>
+         </div>
+         <div class="col-12 col-lg-6 mt-5 text-center">
+           <h3>Family class</h3>
+           <p>{{fam.description|slice:150}}...</p>
+           <a href="{% url 'rooms' %}">Book a Room</a>
+         </div>
+       </div>
+     </div>
+   
+   <div class="contb">
+     <h4>restuarant full of relishing meals</h4>
+     <p>The Elkays Hotel restaurant is Open 24hrs daily. Chose from one of our local and continental dishes.
+        Also a special complimentary breakfast for all. Check out the food lists from our in room menu.</p>
+   </div>
+   
+   
+     <div class="container topc">
+       <div class="row top2">
+         <div class="col-12 col-lg-6">
+           <div class="img">
+                 <img src="{{biz.image.url}}">
+           </div>
+         </div>
+         <div class="col-12 col-lg-6 mt-5 text-center">
+           <h3>Business Class</h3>
+           <p>{{biz.description|slice:150}}...</p>
+             <a href="{% url 'rooms' %}">Book a Room</a>
+         </div>
+       </div>
+     </div>
+   
+   <div class="contc">
+     <h4>bar full of choicest exotic drinks</h4>
+     <p>The Elkays Hotel always ensure to please with excellent hospitality, very friendly staffs ready to help resolve non standard requests and make one feel welcome and relaxed</p>
+   </div>
+   <!-- content done -->
+
+{% endblock content %}
+
+
+ <!-- locate section -->
+ {% block locate %} {% include "locate.html" %} {% endblock locate %}
+ <!-- locate section done -->
+
+
+ <!-- footer section -->
+ {% block footer %}  {% include "footer.html" %} {% endblock footer %}
+ <!-- footer section done -->

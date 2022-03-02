@@ -1,0 +1,59 @@
+{% load static %}
+
+<div class="container-fluid back">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner" data-interval='3000'>
+        <div class="carousel-item active">
+          <img src="{% static '' %}img/carl.jpg" class="d-block w-100" style="height: 70vh;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5><b>Luxury accomodation</b></h5>
+            <p>True luxury</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-interval='3000'>
+          <img src="{% static '' %}img/carl2.jpg" class="d-block w-100" style="height: 70vh;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5><b>Beautiful accomodation for family</b></h5>
+            <p>Home away from home</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-interval='3000'>
+          <img src="{% static '' %}img/poool.jpg" class="d-block w-100" style="height: 70vh;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5><b>Relax</b></h5>
+            <p>Stunning leisure facility</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-interval='3000'>
+          <img src="{% static '' %}img/restau.jpg" class="d-block w-100" style="height: 70vh;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5><b>Eat and drink</b></h5>
+            <p>The Restaurant</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-interval='3000'>
+          <img src="{% static '' %}img/gymy.jpg" class="d-block w-100" style="height: 70vh;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5><b>Techno-gym facility</b></h5>
+            <p>The Gym</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  
